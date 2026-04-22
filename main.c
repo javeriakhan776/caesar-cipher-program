@@ -2,7 +2,7 @@
 #include<string.h>
 int main(){
     char string[50]={'\0'};
-    printf("Enter code : ");
+    printf("Enter cipher text : ");
     scanf("%s",&string);
     
     for (int i=0; i<=50; i++){
@@ -12,7 +12,7 @@ int main(){
     }
     
     for (int i=1; i<=25; i++){
-        printf("%d . ",i);
+        printf("\t%d . ",i);
         for (int j=0; j<=5; j++){
             int temp=string[j]+i;
             if(temp>122){temp-=26;}
@@ -20,4 +20,19 @@ int main(){
         }
         printf("\n");
     }
+    
+    int key=0;
+    
+    printf("\nSelect most appropriate key from above list and enter it : ");
+    scanf("%d",&key);
+    
+    printf("\n\nThe plain text is:\t");
+    
+    for (int i=0; i<=50 && string[i]!=0; i++){
+        int temp=string[i]+key;
+        if(temp>122){temp-=26;}
+        printf("%c",temp);
+    }
+    
+    
 }
