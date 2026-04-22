@@ -31,18 +31,28 @@ int main(){
     printf("\nSelect most appropriate key from above list and enter it : ");
     scanf("%d",&key);
     
-    printf("\n\nThe plain text is:\v");
+    printf("\nThe plain text is:\v");
     
-    for (int i=0; i<=99 && string[i]!=0; i++){
+    char noSpaceString[100]={'\0'};
+    
+    for (int i=0,j=0; i<=99 && string[i]!=0; i++,j++){
         if(string[i]==32){
             printf("%c",string[i]);
+            j--;
         }
         else{
             int temp=string[i]+key;
             if(temp>122){temp-=26;}
             printf("%c",temp);
+            noSpaceString[j]=temp;
         }
     }
+    
+    printf("\nWithout spaces:\v");
+    for (int i=0; i<=99 && string[i]!=0; i++){
+        printf("%c",noSpaceString[i]);
+    }
+    
     
     
 }
