@@ -3,6 +3,11 @@
 ## 📌 Overview
 This project is a C-based Caesar Cipher decoder that performs brute-force decryption by trying all possible shift values (1–25). The user selects the correct key after viewing outputs.
 
+## 🔗 Related Project
+This project was later extended into a more advanced cipher implementation:
+
+- [Multiplicative Cipher Decoder (C Program)](https://github.com/javeriakhan776/multiplicative-cipher-decoder)
+
 ## ⚙️ Features
 - Brute-force Caesar cipher decryption (1–25 shifts)
 - Handles uppercase and lowercase letters
